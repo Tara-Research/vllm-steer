@@ -15,4 +15,6 @@ from .linear import LinearTransformAlgorithm
 from .lm_steer import LMSteerAlgorithm
 from .capture_acts import CaptureActs
 from .inject_acts import InjectActsAlgorithm
-from .fuzzing import FuzzingAlgorithm 
+from .fuzzing import FuzzingAlgorithm
+from .sttp import SttpAlgorithm
+from .stmp import StmpAlgorithm
