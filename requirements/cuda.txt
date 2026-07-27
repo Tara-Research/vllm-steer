@@ -12,4 +12,9 @@ torchvision==0.24.0 # Required for phi3v processor. See https://github.com/pytor
 # Build from https://github.com/facebookresearch/xformers/releases/tag/v0.0.32.post1
 # xformers==0.0.33+5d4b92a5.d20251029; platform_system == 'Linux' and platform_machine == 'x86_64'  # Requires PyTorch >= 2.9
 # FlashInfer should be updated together with the Dockerfile
-flashinfer-python==0.4.1
+# honesty_evals: flashinfer disabled — it hard-pins apache-tvm-ffi==0.1.0b15
+# (a beta with no wheel on Alliance clusters, and a broken sdist:
+# https://github.com/flashinfer-ai/flashinfer/issues/1962). FlashInfer is an
+# optional backend; we serve with enforce_eager + vLLM's bundled attention
+# kernels. Re-enable only with a flashinfer release that drops the beta pin.
+# flashinfer-python==0.4.1
